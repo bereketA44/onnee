@@ -1,6 +1,4 @@
 spring:
-#  profiles:
-#    active: production
   # Security configuration
   # Database
   datasource:
