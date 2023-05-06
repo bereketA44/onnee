@@ -34,8 +34,16 @@ public class ProfileService {
         if (user == null) {
             throw new Exception("User not found");
         }
-        user.setProfile(profile);
+//        user.setProfile(profile);
+//        user.getProfile().setUser(user);
+
+//        profile.getUser().setProfile(profile);
+//        user.setProfile(profile);
+//
         profile.setUser(user);
-        return profileRepository.save(profile);
+        Profile newProfile = profileRepository.save(profile);
+        user.setProfile(newProfile);
+        userRepository.save(user);
+        return newProfile;
     }
 }

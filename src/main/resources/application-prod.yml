@@ -1,13 +1,13 @@
 spring:
-  profiles:
-    active: production
+#  profiles:
+#    active: production
   # Security configuration
   # Database
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/onnee
-    username: postgres
-    password: 1144
+    url: jdbc:postgresql://${RDS_PORT}/${RDS_DB_NAME}
+    username: ${RDS_USERNAME}
+    password: ${RDS_PW}
   # JPA properties
   jpa:
     hibernate:
@@ -17,3 +17,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     open-in-view: false
     generate-ddl: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always # Spring Boot >=v2.5.0
