@@ -2,10 +2,9 @@ spring:
   # Security configuration
   # Database
   datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://${RDS_PORT}/${RDS_DB_NAME}
-    username: ${RDS_USERNAME}
-    password: ${RDS_PW}
+    url: jdbc:postgresql://onnee-app.c1ekes4du2kc.us-east-1.rds.amazonaws.com:5432/onnee
+    username: postgres
+    password: 1144admin
   # JPA properties
   jpa:
     hibernate:
