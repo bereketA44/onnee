@@ -12,7 +12,7 @@ phases:
   post_build:
     commands:
       - echo Build ended on `date`
-      - mv build/libs/*.jar app.jar
+      - mv target/*.jar app.jar
 artifacts:
   files:
     - app.jar
