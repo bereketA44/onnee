@@ -28,11 +28,12 @@ public class ProfileController {
     }
 
     @PostMapping(path = "/profiles")
-    public ResponseEntity<?> addProfile(@RequestBody Profile profile) {
+    public ResponseEntity<?> addProfile(@RequestBody Profile profile) throws Exception {
         try {
             return new ResponseEntity<>(profileService.addProfile(profile), HttpStatus.CREATED);
         } catch (Exception e) {
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+            throw new Exception(e);
+//            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
 }

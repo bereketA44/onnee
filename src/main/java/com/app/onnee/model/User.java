@@ -3,6 +3,7 @@ package com.app.onnee.model;
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 @Entity
@@ -22,8 +23,9 @@ public class User {
     @NonNull
     private String description;
 
+
     @JsonBackReference
-    @OneToOne
+    @OneToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name="profile_id")
     private Profile profile;
 

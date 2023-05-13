@@ -1,0 +1,21 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "bereket44/onnee:0.0.1-SNAPSHOT",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": 5000,
+      "HostPort": 5000
+    }
+  ],
+  "containerDefinitions": [
+    {
+      "name": "onnee-container",
+      "image": "bereket44/onnee:0.0.1-SNAPSHOT",
+      "essential": true,
+      "memory": 2048
+    }
+  ]
+}

@@ -2,6 +2,7 @@ package com.app.onnee.model;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
@@ -19,8 +20,8 @@ public class Profile {
     @NonNull
     private String profilePicture;
 
-    @JsonManagedReference
     @NonNull
-    @OneToOne(mappedBy = "profile")
+    @JsonManagedReference
+    @OneToOne(mappedBy = "profile", cascade = CascadeType.MERGE)
     private User user;
 }
