@@ -1,0 +1,12 @@
+com\app\onnee\model\Profile.class
+com\app\onnee\service\UserService.class
+com\app\onnee\OnneeApplication.class
+com\app\onnee\dto\AnalyticsDTO.class
+com\app\onnee\repository\ProfileRepository.class
+com\app\onnee\repository\UserRepository.class
+com\app\onnee\service\AnalyticsService.class
+com\app\onnee\controller\AnalyticsController.class
+com\app\onnee\controller\ProfileController.class
+com\app\onnee\model\User.class
+com\app\onnee\service\ProfileService.class
+com\app\onnee\controller\UserController.class
