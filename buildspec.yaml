@@ -12,6 +12,7 @@ phases:
   post_build:
     commands:
       - echo Build ended on `date`
+      - mv build/libs/*.jar app.jar
 artifacts:
   files:
-    - target/onnee-0.0.1-SNAPSHOT.jar
+    - app.jar
