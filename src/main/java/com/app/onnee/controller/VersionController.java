@@ -18,6 +18,7 @@ public class VersionController {
         Map<String, String> map = new HashMap<>();
         map.put("v1", "1.0.0 add postgres");
         map.put("v2", "2.0.0 added prod env for postgres");
+        map.put("v3", "2.0.1 added cloned env");
         return new ResponseEntity<>(map.get(version), HttpStatus.OK);
     }
 
