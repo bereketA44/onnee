@@ -12,7 +12,8 @@ HELP.md
 .settings
 .springBeans
 .sts4-cache
-
+.ebextensions
+.elasticbeanstalk
 ### IntelliJ IDEA ###
 .idea
 *.iws
